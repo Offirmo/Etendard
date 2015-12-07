@@ -13,6 +13,10 @@ if(!class_exists('EDD_SL_Theme_Updater')){
 	include(dirname( __FILE__ ).'/admin/EDD_SL_Theme_Updater.php');
 }
 
+//// overridable strings (in polylang)
+set_theme_mod( 'etendard_title', get_option('etendard_title') ? get_option('etendard_title') : get_bloginfo('name') );
+set_theme_mod( 'etendard_subtitle', get_option('etendard_subtitle') ? get_option('etendard_subtitle') : get_bloginfo('description') );
+
 ////////////////////////////////////
 // Cocorico Framework
 ////////////////////////////////////
