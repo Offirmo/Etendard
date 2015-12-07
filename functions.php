@@ -157,7 +157,8 @@ if (!function_exists('etendard_init_cpt')){
 			'menu_position'=>20,
 			'has_archive'=>'portfolio-archive',
 			'rewrite'=>array(
-				'slug'=>apply_filters('etendard_portfolio_slug', __('project', 'etendard'))
+				//'slug'=>apply_filters('etendard_portfolio_slug', __('project', 'etendard'))
+				'slug'=>apply_filters('etendard_portfolio_slug', 'projet')
 			),
 			'exclude_from_search'=> true
 		));
