@@ -658,6 +658,8 @@ if (!function_exists('etendard_service_page_link')){
 		
 		if (count($services_pages) > 0)
 			return get_page_link($services_pages[0]->ID);
+		else
+			return get_post_type_archive_link('service');
 	}
 }
 
