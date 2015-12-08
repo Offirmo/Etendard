@@ -13,7 +13,7 @@ if(!class_exists('EDD_SL_Theme_Updater')){
 	include(dirname( __FILE__ ).'/admin/EDD_SL_Theme_Updater.php');
 }
 
-//// overridable strings (in polylang)
+//// overridable strings (in polylang through a wpml-config.xml file)
 set_theme_mod( 'etendard_title', get_option('etendard_title') ? get_option('etendard_title') : get_bloginfo('name') );
 set_theme_mod( 'etendard_subtitle', get_option('etendard_subtitle') ? get_option('etendard_subtitle') : get_bloginfo('description') );
 
@@ -641,8 +641,10 @@ if (!function_exists('etendard_portfolio_page_link')){
 			'meta_value'=>'template-portfolio.php'
 		));
 		
-		if (count($portfolio_pages) > 0) return get_page_link($portfolio_pages[0]->ID);
-		else return get_post_type_archive_link('portfolio');
+		if (count($portfolio_pages) > 0)
+			return get_page_link($portfolio_pages[0]->ID);
+		else
+			return get_post_type_archive_link('portfolio');
 	}
 }
 
